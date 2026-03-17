@@ -10,9 +10,11 @@
 
 <body>
     <nav>
-        <a href="wczasy.html">Wczasy</a>
-        <a href="wycieczki.html">Wycieczki</a>
-        <a href="allinclusive.html">All inclusive</a>
+        <ul>
+            <li><a href="wczasy.html">Wczasy</a></li>
+            <li><a href="wycieczki.html">Wycieczki</a></li>
+            <li><a href="allinclusive.html">All inclusive</a></li>
+        </ul>
     </nav>
 
 
@@ -23,7 +25,7 @@
             <label for="">Miejsce wycieczki</label>
             <form action="" method="POST">
                 <select name="nazwa">
-                    <!-- tu wypełnia skrypt -->
+                    <!-- skrypt 1 -->
                 </select>
 
                 <label for="1">Ile dorosłych</label>
@@ -33,19 +35,20 @@
                 <label for="3">Termin</label>
                 <input type="data" id="3" name="3" min="1" max="100">
                 <button type="submit">Symulacja ceny</button>
+                <!-- skrypt 2 -->
                 <h4>Koszt wycieczki</h4>
             </form>
         </aside>
 
         <!-- sekcja -->
         <section>
-<p> Autor: dupa irysa </p>
+            <!-- skrypt 3 -->
         </section>
     </main>
 
 
     <footer>
-
+        <p> Autor: MS 13 </p>
     </footer>
 </body>
 
