@@ -28,19 +28,22 @@
                     <!-- skrypt 1 -->
                 </select>
 
-                <label for="1">Ile dorosłych</label>
-                <input type="number" id="1" name="1" min="1" max="100">
-                <label for="2">Ile dzieci</label>
-                <input type="number" id="2" name="2" min="1" max="100">
-                <label for="3">Termin</label>
-                <input type="data" id="3" name="3" min="1" max="100">
+                <label for="1">Ile dorosłych</label><br>
+                <input type="number" id="1" name="1" min="1" max="100"><br>
+
+                <label for="2">Ile dzieci</label><br>
+                <input type="number" id="2" name="2" min="1" max="100"><br>
+
+                <label for="3">Termin</label><br>
+                <input type="data" id="3" name="3" min="1" max="100"><br>
+
                 <button type="submit">Symulacja ceny</button>
                 <!-- skrypt 2 -->
                 <h4>Koszt wycieczki</h4>
             </form>
         </aside>
 
-        <!-- sekcja -->
+        
         <section>
             <!-- skrypt 3 -->
         </section>
@@ -48,7 +51,7 @@
 
 
     <footer>
-        <p> Autor: MS 13 </p>
+        <p> Autor: plemie maciutów </p>
     </footer>
 </body>
 
