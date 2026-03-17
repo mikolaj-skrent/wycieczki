@@ -10,6 +10,10 @@ footer {
     padding: 10px;
 }
 
+footer {
+    clear: both;
+}
+
 aside,
 section {
     width: 50%;
@@ -19,6 +23,11 @@ section {
 
 aside {
     background-color: #B2DFDB;
+    float: left;
+}
+
+section {
+    float: right;
 }
 
 .wycieczka {

@@ -1,3 +1,9 @@
+<?php
+$condom = mysqli_connect("localhost", "root", "", "wyprawy");
+
+?>
+
+
 <!DOCTYPE html>
 <html lang="pl">
 
