@@ -1,0 +1,15 @@
+* {
+    font-family: Comic Sans MS;
+    text-align: center;
+}
+
+nav, footer {
+    background-color: #00838F;
+    color: #B2DFDB;
+    margin: 10px;
+}
+
+aside, section {
+    width: 50%;
+    
+}
