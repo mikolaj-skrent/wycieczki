@@ -1,5 +1,5 @@
 <?php
-$condom = mysqli_connect("localhost", "root", "", "wyprawy");
+$con = mysqli_connect("localhost", "root", "", "wyprawy");
 
 ?>
 
@@ -17,6 +17,7 @@ $condom = mysqli_connect("localhost", "root", "", "wyprawy");
 <body>
     <nav>
         <ul>
+            <li><a href="index.php">Strona główna</a></li>
             <li><a href="wczasy.html">Wczasy</a></li>
             <li><a href="wycieczki.html">Wycieczki</a></li>
             <li><a href="allinclusive.html">All inclusive</a></li>
@@ -29,9 +30,20 @@ $condom = mysqli_connect("localhost", "root", "", "wyprawy");
         <aside>
             <h3>Twój cel wyprawy</h3>
             <label for="">Miejsce wycieczki</label>
-            <form action="" method="POST">
-                <select name="nazwa">
+            <form action="index.php" method="POST">
+                <select name="form1">
                     <!-- skrypt 1 -->
+                    <?php
+                    $sql1 = "SELECT nazwa FROM miejsca ORDER BY nazwa ASC;";
+                    $result = $con->query($sql1);
+                    while ($row = $result->fetch_assoc()) {
+                        echo "<option>";
+                        echo $row["nazwa"];
+                        echo "</option>";
+                    }
+
+                    ?>
+
                 </select>
 
                 <label for="1">Ile dorosłych</label><br>
@@ -43,14 +55,22 @@ $condom = mysqli_connect("localhost", "root", "", "wyprawy");
                 <label for="3">Termin</label><br>
                 <input type="data" id="3" name="3" min="1" max="100"><br>
 
-                <button type="submit">Symulacja ceny</button>
-                <!-- skrypt 2 -->
-                <h4>Koszt wycieczki</h4>
+                <button type="submit" name="formularzSymulacja">Symulacja ceny</button>
+
             </form>
+            <h4>Koszt wycieczki</h4>
+            <!-- skrypt 2 -->
+            <?php
+            if (isset($_POST["formularz-symulacja"])) {
+                $nazwa = $_POST["form1"];
+                $sql2 = "SELECT cena FROM miejsca WHERE nazwa = '$nazwa';";
+            }
+            ?>
         </aside>
 
-        
+
         <section>
+            <h3>Wycieczki</h3>
             <!-- skrypt 3 -->
         </section>
     </main>
@@ -62,3 +82,7 @@ $condom = mysqli_connect("localhost", "root", "", "wyprawy");
 </body>
 
 </html>
+
+<?php
+$con->close();
+?>
