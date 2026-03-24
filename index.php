@@ -61,9 +61,14 @@ $con = mysqli_connect("localhost", "root", "", "wyprawy");
             <h4>Koszt wycieczki</h4>
             <!-- skrypt 2 -->
             <?php
-            if (isset($_POST["formularz-symulacja"])) {
-                $nazwa = $_POST["form1"];
-                $sql2 = "SELECT cena FROM miejsca WHERE nazwa = '$nazwa';";
+            if (isset($_POST["formularzSymulacja"])) {
+                $nazwa = $_POST["form1"];                
+                $sql2 = "SELECT cena FROM miejsca WHERE nazwa = '$nazwa';"; 
+                $result2 = mysqli_query($con, $sql2);
+            }
+
+            while ($row = $result2-> fetch_assoc()) {
+                $row["cena"];
             }
             ?>
         </aside>
